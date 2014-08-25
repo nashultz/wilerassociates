@@ -1,4 +1,0 @@
-wilerassociates
-===============
-
-Wiler and Associates
