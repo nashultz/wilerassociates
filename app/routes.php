@@ -15,3 +15,18 @@ Route::get('/', function()
 {
 	return View::make('index');
 });
+
+
+API::transform('User', 'UserTransformer');
+
+API::error(function(Symfony\Component\HttpKernel\Exception\UnauthorizedHttpException $exception) {
+	return Response::make('Hey, what do you think you are doing...', 401);
+});
+
+Route::api([ 'version' => 'v1' ], function() {
+
+	Route::get('users', 'UserController@index');
+
+	//Route::resource('users','UserController');
+
+});
