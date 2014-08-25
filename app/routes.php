@@ -23,7 +23,7 @@ API::error(function(Symfony\Component\HttpKernel\Exception\UnauthorizedHttpExcep
 	return Response::make('Hey, what do you think you are doing...', 401);
 });
 
-Route::api([ 'version' => 'v1' ], function() {
+Route::api([ 'version' => 'v1', 'protected' => true ], function() {
 
 	Route::get('users', 'UserController@index');
 
