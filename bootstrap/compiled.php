@@ -52,10 +52,6 @@ use Closure;
 use ArrayAccess;
 use ReflectionClass;
 use ReflectionParameter;
-class BindingResolutionException extends \Exception
-{
-    
-}
 class Container implements ArrayAccess
 {
     protected $resolved = array();
@@ -477,7 +473,7 @@ class Application extends Container implements HttpKernelInterface, TerminableIn
     }
     public static function getBootstrapFile()
     {
-        return '/home/forge/working/laravel-master/vendor/laravel/framework/src/Illuminate/Foundation' . '/start.php';
+        return '/home/nashultz/public_html/wilerassociates/vendor/laravel/framework/src/Illuminate/Foundation' . '/start.php';
     }
     public function startExceptionHandling()
     {
@@ -687,7 +683,7 @@ class Application extends Container implements HttpKernelInterface, TerminableIn
     public function forgetMiddleware($class)
     {
         $this->middlewares = array_filter($this->middlewares, function ($m) use($class) {
-            return $m['class'] != $class;
+            return get_class($m['class']) != $class;
         });
     }
     public function handle(SymfonyRequest $request, $type = HttpKernelInterface::MASTER_REQUEST, $catch = true)
@@ -1360,6 +1356,7 @@ class Request
     }
     public function overrideGlobals()
     {
+        $this->server->set('QUERY_STRING', static::normalizeQueryString(http_build_query($this->query->all(), null, '&')));
         $_GET = $this->query->all();
         $_POST = $this->request->all();
         $_SERVER = $this->server->all();
@@ -3929,8 +3926,8 @@ class NamespacedItemResolver
         if (isset($this->parsed[$key])) {
             return $this->parsed[$key];
         }
-        $segments = explode('.', $key);
         if (strpos($key, '::') === false) {
+            $segments = explode('.', $key);
             $parsed = $this->parseBasicSegments($segments);
         } else {
             $parsed = $this->parseNamespacedSegments($key);
@@ -4120,10 +4117,6 @@ namespace Illuminate\Filesystem;
 
 use FilesystemIterator;
 use Symfony\Component\Finder\Finder;
-class FileNotFoundException extends \Exception
-{
-    
-}
 class Filesystem
 {
     public function exists($path)
@@ -7907,9 +7900,6 @@ class Store implements SessionInterface
     public function getOldInput($key = null, $default = null)
     {
         $input = $this->get('_old_input', array());
-        if (is_null($key)) {
-            return $input;
-        }
         return array_get($input, $key, $default);
     }
     public function set($name, $value)
@@ -8317,10 +8307,6 @@ namespace Illuminate\Encryption;
 
 use Symfony\Component\Security\Core\Util\StringUtils;
 use Symfony\Component\Security\Core\Util\SecureRandom;
-class DecryptException extends \RuntimeException
-{
-    
-}
 class Encrypter
 {
     protected $key;
@@ -8929,7 +8915,8 @@ class StreamHandler extends AbstractProcessingHandler
     protected $url;
     private $errorMessage;
     protected $filePermission;
-    public function __construct($stream, $level = Logger::DEBUG, $bubble = true, $filePermission = null)
+    protected $useLocking;
+    public function __construct($stream, $level = Logger::DEBUG, $bubble = true, $filePermission = null, $useLocking = false)
     {
         parent::__construct($level, $bubble);
         if (is_resource($stream)) {
@@ -8938,6 +8925,7 @@ class StreamHandler extends AbstractProcessingHandler
             $this->url = $stream;
         }
         $this->filePermission = $filePermission;
+        $this->useLocking = $useLocking;
     }
     public function close()
     {
@@ -8964,7 +8952,13 @@ class StreamHandler extends AbstractProcessingHandler
                 throw new \UnexpectedValueException(sprintf('The stream or file "%s" could not be opened: ' . $this->errorMessage, $this->url));
             }
         }
+        if ($this->useLocking) {
+            flock($this->stream, LOCK_EX);
+        }
         fwrite($this->stream, (string) $record['formatted']);
+        if ($this->useLocking) {
+            flock($this->stream, LOCK_UN);
+        }
     }
     private function customErrorHandler($code, $msg)
     {
@@ -8982,14 +8976,14 @@ class RotatingFileHandler extends StreamHandler
     protected $nextRotation;
     protected $filenameFormat;
     protected $dateFormat;
-    public function __construct($filename, $maxFiles = 0, $level = Logger::DEBUG, $bubble = true, $filePermission = null)
+    public function __construct($filename, $maxFiles = 0, $level = Logger::DEBUG, $bubble = true, $filePermission = null, $useLocking = false)
     {
         $this->filename = $filename;
         $this->maxFiles = (int) $maxFiles;
         $this->nextRotation = new \DateTime('tomorrow');
         $this->filenameFormat = '{filename}-{date}';
         $this->dateFormat = 'Y-m-d';
-        parent::__construct($this->getTimedFilename(), $level, $bubble, $filePermission);
+        parent::__construct($this->getTimedFilename(), $level, $bubble, $filePermission, $useLocking);
     }
     public function close()
     {
