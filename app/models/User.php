@@ -1,5 +1,7 @@
 <?php
 
+// More to Come Here for Table Attachments (Since it's attached to ALL tables...)
+
 use Illuminate\Auth\UserTrait;
 use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableTrait;
