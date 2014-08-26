@@ -50,6 +50,7 @@ class CreatePhonesTable extends Migration {
 	public function down()
 	{
 		//
+		Schema::drop('phones');
 	}
 
 }

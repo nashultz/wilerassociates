@@ -92,6 +92,7 @@ class CreateListingsTable extends Migration {
 	public function down()
 	{
 		//
+		Schema::drop('listings');
 	}
 
 }

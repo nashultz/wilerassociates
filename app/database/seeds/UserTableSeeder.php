@@ -22,7 +22,16 @@ class UserTableSeeder extends Seeder {
 				'email'		=>	'NathonS@systemsedgeonline.com',
 				'protected'	=>	true
 			]
-		);		
+		);	
+
+		User::create(
+			[
+				'username'	=>	'paul',
+				'password'	=>	'paul',
+				'email'		=>	'Paul@somewhere.com',
+				'protected'	=>	true			
+			]
+		);	
 	}
 
 }
