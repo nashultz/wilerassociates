@@ -1,11 +1,142 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Laravel PHP Framework</title>
-	
+	<title>Wiler &amp; Associates, Inc.</title>
+  <!-- META DATA -->
+  <meta charset="UTF-8">
+	<meta name="description" content="">
+  <meta name="authors" content="">
+	<!-- ICONS -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+  <!-- STYLESHEETS -->
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+  <!--<%-- css('dependencies/bootstrap.css') --%>-->
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <!--<%-- css('dependencies/font-awesome.css') --%>-->
+  <% css('animate.css') %>
+  <% css('style.css') %>
+  <!-- JAVASCRIPT -->
+  <script src="http://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
+  <!--<%-- js('dependencies/jquery-2.1.1.min.js') --%>-->
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.js" type="text/javascript"></script>
+  <!--<%-- js('dependencies/bootstrap.js') --%>-->
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.carousel').carousel({
+        interval: 10000
+      });
+    });
+  </script>
+  
 </head>
 <body>
-	<h1>Something here...</h1>
+  <!-- Fixed navbar -->
+  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#"><% img('','logo.gif') %></a>
+              <div class="clearfix"></div>
+          </div>
+          <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav navbar-right">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Search</a></li>
+                  <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Listings <span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                          <li><a href="#">Commercial</a></li>
+                          <li><a href="#">Residential</a></li>
+                        <!--  <li><a href="#">Something else here</a></li>
+                          <li class="divider"></li>
+                          <li class="dropdown-header">Nav header</li>
+                          <li><a href="#">Separated link</a></li>
+                          <li><a href="#">One more separated link</a></li>-->
+                      </ul>
+                  </li>
+                  <li><a href="#portfolio">Portfolio</a></li>
+                  <li><a href="#contact">Contact</a></li>
+              </ul>
+          </div><!--/.nav-collapse -->
+      </div>
+  </div>
+  <div class="main container">
+    <div class="row">
+      <div class="welcome">
+          <h3>Welcome</h3>
+          <p>We welcome you to Wiler & Associates Real Estate Services, Inc. Wiler & Associates offers more than two decades of commercial and residential real estate experience in the state of Texas. We bring together a collection of market savvy, customer centricity, and real estate experience to provide our customers with the greatest satisfaction.</p>
+          <p>At W&A we not only work closely with our clients to help facilitate the buying or selling process, we offer support from initial contact to closing and beyond. We strive to create value through the eyes of our clients, and pride ourselves on creating lifelong relationships by working hard to provide the best experience possible. Our licensed real estate team has earned a reputation for extraordinary service, integrity, and personal attention to our clients.</p>
+          <p>We look forward to having the opportunity to earn your business.</p>
+        </div>
+      <div class="listings-grid">
+        <div class="listings">
+          <div class="col-md-4">
+            <div class="listing">
+              <h4>Listing Title</h4>
+              <% img('','properties/c_1.jpg') %>
+              <div class="desc">
+                <p>Arlington Comfort Suites - 411 Road to 6 Flags W<br>
+                   Arlington, TX 76011</p>
+                <p>Listed By: Dustin Hughey</p>
+                <p>108 Rooms Full Service Comfort Suites Hotel, All Suites, 
+                   Top Ranked Hotel, 71,149 +- Sqft, 2.41 acres 411 W Road to 
+                   Six Flags, Arlington, Texas 76011 Turnpike South Addition 
+                   Lot 1 B1, 2.41 acres
+                </p>
+              </div>
+              <div class="viewlisting">
+                <button class="btn btn-primary">View Listing</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="listing">
+              <h4>Listing Title</h4>
+              <% img('','properties/c_1.jpg') %>
+              <div class="desc">
+                <p>Arlington Comfort Suites - 411 Road to 6 Flags W<br>
+                   Arlington, TX 76011</p>
+                <p>Listed By: Dustin Hughey</p>
+                <p>108 Rooms Full Service Comfort Suites Hotel, All Suites, 
+                   Top Ranked Hotel, 71,149 +- Sqft, 2.41 acres 411 W Road to 
+                   Six Flags, Arlington, Texas 76011 Turnpike South Addition 
+                   Lot 1 B1, 2.41 acres
+                </p>
+              </div>
+              <div class="viewlisting">
+                <button class="btn btn-primary">View Listing</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="listing">
+              <h4>Listing Title</h4>
+              <% img('','properties/c_1.jpg') %>
+              <div class="desc">
+                <p>Arlington Comfort Suites - 411 Road to 6 Flags W<br>
+                   Arlington, TX 76011</p>
+                <p>Listed By: Dustin Hughey</p>
+                <p>108 Rooms Full Service Comfort Suites Hotel, All Suites, 
+                   Top Ranked Hotel, 71,149 +- Sqft, 2.41 acres 411 W Road to 
+                   Six Flags, Arlington, Texas 76011 Turnpike South Addition 
+                   Lot 1 B1, 2.41 acres
+                </p>
+              </div>
+              <div class="viewlisting">
+                <button class="btn btn-primary">View Listing</button>
+              </div>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

@@ -1,0 +1,84 @@
+/* 
+ * -----------------------
+ * DEFAULT DECLARATIONS
+ * -----------------------
+ */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-height: 100%;
+}
+
+html {
+  position: relative;
+}
+
+body {
+  direction: ltr;
+  background: url('../img/carousel/img1.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding-top: 101px;
+}
+
+.container-fluid,
+.row {
+  height: 100%;
+}
+
+.navbar {
+  height: auto;
+  min-height: none;
+}
+
+.navbar,
+.navbar-default {
+  background: #ffffff;
+}
+
+.navbar-brand {
+  padding: 5px 0px;
+  height: auto;
+}
+
+.navbar-nav>li>a {
+  line-height: 71px;
+}
+
+.welcome {
+  background: rgba(255,255,255,0.8);
+  margin: 140px 100px 30px;
+  padding: 10px 30px 15px;
+}
+
+.listings-grid {
+  margin: 0 -15px;
+  padding: 15px;
+}
+
+.welcome h3,
+.listings h3 {
+  text-align: center;
+}
+
+.listings {
+  h3 {
+    margin: 0;
+    padding: 10px 0;
+  }
+}
+
+.listing {
+  background: rgba(0,59,0,0.5);
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
