@@ -11,10 +11,7 @@ class UserController extends \BaseController {
 	 */
 	public function index()
 	{
-		$test = [ 'message' => 'test', 'another' => 'rawr' ];
-		$response = Response::json($test, 400);
-
-		return Response::makeFromExisting($response);
+		return Response::json($test, 400);
 
 		return Response::api()->withCollection(User::all(), new UserTransformer);
 	}
