@@ -11,7 +11,12 @@ class UserController extends \BaseController {
 	 */
 	public function index()
 	{
-		return $this->withCollection(User::all(), new UserTransformer);
+		$test = [ 'message' => 'test', 'another' => 'rawr' ];
+		$response = Response::json($test, 400);
+
+		return Response::makeFromExisting($response);
+
+		return Response::api()->withCollection(User::all(), new UserTransformer);
 	}
 
 
@@ -22,7 +27,7 @@ class UserController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+		// Not Used (Done with AngularJS)
 	}
 
 
@@ -57,7 +62,7 @@ class UserController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		// Not Used (Done with AngularJS)
 	}
 
 
