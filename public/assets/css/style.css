@@ -66,3 +66,9 @@ body {
   .listing img {
     width: 100%;
     height: auto; }
+
+.footer {
+  background: #003b00;
+  color: #fff; }
+  .footer .copyright {
+    color: #fff; }

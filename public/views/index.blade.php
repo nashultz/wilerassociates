@@ -79,7 +79,7 @@
           <div class="col-md-4">
             <div class="listing">
               <h4>Listing Title</h4>
-              <% img('','properties/c_1.jpg') %>
+              <% img('','properties/c_1.jpg',array('class'=>'img-circle')) %>
               <div class="desc">
                 <p>Arlington Comfort Suites - 411 Road to 6 Flags W<br>
                    Arlington, TX 76011</p>
@@ -98,7 +98,7 @@
           <div class="col-md-4">
             <div class="listing">
               <h4>Listing Title</h4>
-              <% img('','properties/c_1.jpg') %>
+              <% img('','properties/c_1.jpg',array('class'=>'img-circle')) %>
               <div class="desc">
                 <p>Arlington Comfort Suites - 411 Road to 6 Flags W<br>
                    Arlington, TX 76011</p>
@@ -117,7 +117,7 @@
           <div class="col-md-4">
             <div class="listing">
               <h4>Listing Title</h4>
-              <% img('','properties/c_1.jpg') %>
+              <% img('','properties/c_1.jpg',array('class'=>'img-circle')) %>
               <div class="desc">
                 <p>Arlington Comfort Suites - 411 Road to 6 Flags W<br>
                    Arlington, TX 76011</p>
@@ -134,6 +134,41 @@
             </div>
           </div>
           <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="copyright">
+            <div>Wiler &amp; Associates, Inc.</div>
+            <div> Office: 512 244-6100</div>
+            <div> Fax: 512 244-6781</div>
+            <div> 13101 El Camino Road</div>
+            <div> Austin, Texas  78727</div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="disclaimer">
+            <h5>Discliamer</h5>
+            <p>This firm is licensed and regulated by the Texas Real Estate Commission (TREC). 
+               TREC administers two Recovery Funds which may be used to satisfy judgements against 
+               Inspectors and Real Estate Licenses involving a violation of the law.</p>
+            <p>Complaints or inquiries should be directed to:</p>
+            <div>Texas Real Estate Commission</div>
+            <div>512-465-3960</div>
+            <div>P.0. Box 12188</div>
+            <div>Austin, TX 78711-2188</div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="copyright">
+            <div>Copyright &copy; <?php echo date('Y'); ?></div>
+            <div>Wiler &amp; Associates, Inc.</div>
+            <div>All Rights Reserved</div>
+          </div>
         </div>
       </div>
     </div>
