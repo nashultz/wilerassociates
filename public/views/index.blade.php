@@ -16,6 +16,8 @@
   <!--<%-- css('dependencies/font-awesome.css') --%>-->
   <% css('animate.css') %>
   <% css('style.css') %>
+  <!-- FONTS -->
+  <link href='http://fonts.googleapis.com/css?family=IM+Fell+DW+Pica+SC' rel='stylesheet' type='text/css'>
   <!-- JAVASCRIPT -->
   <script src="http://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
   <!--<%-- js('dependencies/jquery-2.1.1.min.js') --%>-->
@@ -42,6 +44,7 @@
                   <span class="icon-bar"></span>
               </button>
               <a class="navbar-brand" href="#"><% img('','logo.gif') %></a>
+              <div class="headertxt"><h1>Wiler &amp; Associates, Inc.</h1></div>
               <div class="clearfix"></div>
           </div>
           <div class="navbar-collapse collapse">
@@ -70,7 +73,7 @@
   <div class="main container">
     <div class="row">
       <div class="welcome">
-          <h3>Welcome</h3>
+          <h1>Welcome</h1>
           <p>We welcome you to Wiler & Associates Real Estate Services, Inc. Wiler & Associates offers more than two decades of commercial and residential real estate experience in the state of Texas. We bring together a collection of market savvy, customer centricity, and real estate experience to provide our customers with the greatest satisfaction.</p>
           <p>At W&A we not only work closely with our clients to help facilitate the buying or selling process, we offer support from initial contact to closing and beyond. We strive to create value through the eyes of our clients, and pride ourselves on creating lifelong relationships by working hard to provide the best experience possible. Our licensed real estate team has earned a reputation for extraordinary service, integrity, and personal attention to our clients.</p>
           <p>We look forward to having the opportunity to earn your business.</p>
@@ -80,7 +83,7 @@
           <div class="col-md-4">
             <div class="listing">
               <h4 class="listing-title">Listing Title</h4>
-              <% img('','properties/c_1.jpg',array('class'=>'img-circle')) %>
+              <% img('','properties/c_1.jpg',array('class'=>'img-thumbnail img-responsive')) %>
               <div class="desc">
                 <p>Arlington Comfort Suites - 411 Road to 6 Flags W<br>
                    Arlington, TX 76011</p>
@@ -92,14 +95,14 @@
                 </p>
               </div>
               <div class="viewlisting">
-                <button class="btn btn-primary">View Listing</button>
+                <button class="btn btn-primary btn-block">View Listing</button>
               </div>
             </div>
           </div>
           <div class="col-md-4">
             <div class="listing">
               <h4 class="listing-title">Listing Title</h4>
-              <% img('','properties/c_1.jpg',array('class'=>'img-circle')) %>
+              <% img('','properties/c_1.jpg',array('class'=>'img-thumbnail img-responsive')) %>
               <div class="desc">
                 <p>Arlington Comfort Suites - 411 Road to 6 Flags W<br>
                    Arlington, TX 76011</p>
@@ -111,14 +114,14 @@
                 </p>
               </div>
               <div class="viewlisting">
-                <button class="btn btn-primary">View Listing</button>
+                <button class="btn btn-primary btn-block">View Listing</button>
               </div>
             </div>
           </div>
           <div class="col-md-4">
             <div class="listing">
               <h4 class="listing-title">Listing Title</h4>
-              <% img('','properties/c_1.jpg',array('class'=>'img-circle')) %>
+              <% img('','properties/c_1.jpg',array('class'=>'img-thumbnail img-responsive')) %>
               <div class="desc">
                 <p>Arlington Comfort Suites - 411 Road to 6 Flags W<br>
                    Arlington, TX 76011</p>
@@ -130,7 +133,7 @@
                 </p>
               </div>
               <div class="viewlisting">
-                <button class="btn btn-primary">View Listing</button>
+                <button class="btn btn-primary btn-block">View Listing</button>
               </div>
             </div>
           </div>
@@ -148,12 +151,12 @@
               <% img('','logo-footer.gif') %>
             </div>
             <div class="spacer-10"></div>
-            <div> Office: 512 244-6100</div>
+            <div class="facontent"><span class="fa fa-phone fa-fw fa_front"></span>512 244-6100</div>
             <div class="spacer-5"></div>
-            <div> Fax: 512 244-6781</div>
+            <div class="facontent"><span class="fa fa-fax fa-fw fa_front"></span>Fax: 512 244-6781</div>
             <div class="spacer-5"></div>
-            <div> 13101 El Camino Road</div>
-            <div> Austin, Texas  78727</div>
+            <div class="facontent"><span class="fa fa-map-marker fa-fw fa_front"></span>13101 El Camino Road</div>
+            <div class="facontent"><div class="faspacer"></div>Austin, Texas  78727</div>
           </div>
         </div>
         <div class="col-sm-6">
