@@ -45,14 +45,13 @@ body {
   background: rgba(255, 255, 255, 0.8);
   margin: 140px 100px 30px;
   padding: 10px 30px 15px; }
+  .welcome h3 {
+    text-align: center;
+    text-transform: uppercase; }
 
 .listings-grid {
   margin: 0 -15px;
   padding: 15px; }
-
-.welcome h3,
-.listings h3 {
-  text-align: center; }
 
 .listings h3 {
   margin: 0;
@@ -66,6 +65,9 @@ body {
   .listing img {
     width: 100%;
     height: auto; }
+  .listing .listing-title {
+    text-transform: uppercase;
+    text-align: left; }
 
 .footer {
   background: #003b00;
@@ -75,6 +77,10 @@ body {
     padding: 15px 0 15px; }
   .footer .disclaimer {
     padding: 5px 0 15px; }
+
+.flogo img {
+  width: 100%;
+  height: auto; }
 
 .spacer-5 {
   height: 5px; }

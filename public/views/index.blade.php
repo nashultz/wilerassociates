@@ -79,7 +79,7 @@
         <div class="listings">
           <div class="col-md-4">
             <div class="listing">
-              <h4>Listing Title</h4>
+              <h4 class="listing-title">Listing Title</h4>
               <% img('','properties/c_1.jpg',array('class'=>'img-circle')) %>
               <div class="desc">
                 <p>Arlington Comfort Suites - 411 Road to 6 Flags W<br>
@@ -98,7 +98,7 @@
           </div>
           <div class="col-md-4">
             <div class="listing">
-              <h4>Listing Title</h4>
+              <h4 class="listing-title">Listing Title</h4>
               <% img('','properties/c_1.jpg',array('class'=>'img-circle')) %>
               <div class="desc">
                 <p>Arlington Comfort Suites - 411 Road to 6 Flags W<br>
@@ -117,7 +117,7 @@
           </div>
           <div class="col-md-4">
             <div class="listing">
-              <h4>Listing Title</h4>
+              <h4 class="listing-title">Listing Title</h4>
               <% img('','properties/c_1.jpg',array('class'=>'img-circle')) %>
               <div class="desc">
                 <p>Arlington Comfort Suites - 411 Road to 6 Flags W<br>
@@ -145,7 +145,7 @@
         <div class="col-sm-3">
           <div class="copyright">
             <div class="flogo">
-              <% img('','footerlogo.gif') %>
+              <% img('','logo-footer.gif') %>
             </div>
             <div class="spacer-10"></div>
             <div> Office: 512 244-6100</div>
