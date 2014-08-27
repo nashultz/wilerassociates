@@ -20,6 +20,11 @@ Route::get('/', function()
 	return View::make('index');
 });
 
+Route::get('/index2', function()
+{
+	return View::make('index2');
+});
+
 
 API::transform('User', 'UserTransformer');
 
