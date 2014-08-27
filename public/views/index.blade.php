@@ -60,8 +60,9 @@
                           <li><a href="#">One more separated link</a></li>-->
                       </ul>
                   </li>
-                  <li><a href="#portfolio">Portfolio</a></li>
-                  <li><a href="#contact">Contact</a></li>
+                  <li><a href="#">Resources</a></li>
+                  <li><a href="#">Locations</a></li>
+                  <li><a href="#">Contact</a></li>
               </ul>
           </div><!--/.nav-collapse -->
       </div>
@@ -143,9 +144,14 @@
       <div class="row">
         <div class="col-sm-3">
           <div class="copyright">
-            <div>Wiler &amp; Associates, Inc.</div>
+            <div class="flogo">
+              <% img('','footerlogo.gif') %>
+            </div>
+            <div class="spacer-10"></div>
             <div> Office: 512 244-6100</div>
+            <div class="spacer-5"></div>
             <div> Fax: 512 244-6781</div>
+            <div class="spacer-5"></div>
             <div> 13101 El Camino Road</div>
             <div> Austin, Texas  78727</div>
           </div>
