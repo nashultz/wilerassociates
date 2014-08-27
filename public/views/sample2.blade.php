@@ -15,7 +15,7 @@
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   <!--<%-- css('dependencies/font-awesome.css') --%>-->
   <% css('animate.css') %>
-  <% css('style.css') %>
+  <% css('style2.css') %>
   <!-- FONTS -->
   <link href='http://fonts.googleapis.com/css?family=IM+Fell+DW+Pica+SC' rel='stylesheet' type='text/css'>
   <!-- JAVASCRIPT -->
