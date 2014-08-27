@@ -16,11 +16,7 @@ html {
 
 body {
   direction: ltr;
-  background: url("../img/carousel/img1.jpg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background: #e7e7e7;
   padding-top: 101px; }
 
 .container-fluid,
@@ -46,16 +42,27 @@ body {
 .navbar-nav > li > a {
   line-height: 71px; }
 
+.welcome-container {
+  background: url("../img/carousel/img1.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
 .welcome {
-  background: rgba(0, 59, 0, 0.5);
-  color: #fff;
-  margin: 140px 15px 30px;
+  background: rgba(255, 255, 255, 0.8);
+  color: #000;
+  margin: 140px 0px 30px;
   padding: 10px 30px 15px; }
   .welcome h1 {
     text-align: center;
     text-transform: uppercase;
     font-family: 'IM Fell DW Pica SC', serif;
     margin: 10px 0; }
+  .welcome h3 {
+    margin: 10px 0;
+    text-align: center;
+    text-transform: uppercase; }
 
 .listings-grid {
   margin: 0 -15px;
@@ -67,13 +74,18 @@ body {
   font-family: Georgia, serif; }
 
 .listing {
-  background: rgba(0, 59, 0, 0.5);
-  color: #fff;
+  background: white;
+  color: #222;
+  border: 2px solid #b8b8b8;
   padding: 10px; }
   .listing .listing-title {
     text-transform: uppercase;
     text-align: left;
     font-family: Georgia, serif; }
+  .listing .img-thumbnail {
+    border-color: #b8b8b8;
+    background: #e3e3e3;
+    border-radius: 0px; }
   .listing .desc {
     padding: 10px 0 0; }
 
