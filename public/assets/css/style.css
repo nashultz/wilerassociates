@@ -47,8 +47,9 @@ body {
   line-height: 71px; }
 
 .welcome {
-  background: rgba(255, 255, 255, 0.8);
-  margin: 140px 100px 30px;
+  background: rgba(0, 59, 0, 0.5);
+  color: #fff;
+  margin: 140px 15px 30px;
   padding: 10px 30px 15px; }
   .welcome h1 {
     text-align: center;
