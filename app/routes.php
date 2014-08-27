@@ -20,9 +20,9 @@ Route::get('/', function()
 	return View::make('index');
 });
 
-Route::get('/index2', function()
+Route::get('sample2', function()
 {
-	return View::make('index2');
+	return View::make('sample2');
 });
 
 

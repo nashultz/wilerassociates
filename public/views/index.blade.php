@@ -54,7 +54,7 @@
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sample Pages <span class="caret"></span></a>
                       <ul class="dropdown-menu">
                           <li><a href="<% URL::to('/') %>">Home Page 1</a></li>
-                          <li><a href="<% URL::to('/index2') %>">Home Page 2</a></li>
+                          <li><a href="<% URL::to('/sample2') %>">Home Page 2</a></li>
                         <!--  <li><a href="#">Something else here</a></li>
                           <li class="divider"></li>
                           <li class="dropdown-header">Nav header</li>
