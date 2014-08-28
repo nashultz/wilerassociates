@@ -21,7 +21,7 @@ Blade::setEscapedContentTags('<%%', '%%>'); // for escaped data
 
 Route::get('/', function()
 {
-	return View::make('index');
+	return View::make('sample2');
 });
 
 Route::get('sample2', function()

@@ -7,7 +7,7 @@ class UserController extends \BaseController {
 
 	public function index()
 	{
-		if (!Auth::User()->can('list_users'))
+		if (!Auth::User()->can( 'list_users' ) )
 			return JSON::accessDenied();
 
 
@@ -45,11 +45,11 @@ class UserController extends \BaseController {
 
 		try {
 			$user = User::findOrFail($id);
-			return Response::json( [ 'message' => 'Success!', 'user' => $user ], 200);
+			return JSON::success( [ 'user' => $user ] );
 		}
 		catch (ModelNotFoundException $e)
 		{
-			return Response::json( [ 'message' => 'User Not Found' ], 400);
+			return JSON::failure( 'User Not Found' );
 		}
 		
 	}
