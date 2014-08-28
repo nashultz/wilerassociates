@@ -33,6 +33,7 @@ App::after(function($request, $response)
 |
 */
 
+/*
 Route::filter('auth', function()
 {
 	if (Auth::guest())
@@ -47,6 +48,7 @@ Route::filter('auth', function()
 		}
 	}
 });
+*/
 
 
 Route::filter('auth.basic', function()

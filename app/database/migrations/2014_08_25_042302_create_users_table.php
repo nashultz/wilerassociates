@@ -27,7 +27,13 @@ class CreateUsersTable extends Migration {
 			$table->string('email');
 
 			// Protected
-			$table->boolean('protected');
+			$table->boolean('protected')->default(0);
+
+			// Who Created?
+			$table->integer('created_by')->nullable();
+
+			// Who Updated?
+			$table->integer('updated_by')->nullable();
 
 			// Timestamps (created_at and updated_at)
 			$table->timestamps();
@@ -36,7 +42,7 @@ class CreateUsersTable extends Migration {
 			$table->softDeletes();
 
 			// Remember Token
-			$table->string('remember_token', 512);
+			$table->rememberToken();
 
 			// Last Login (timestamp)
 			$table->timestamp('last_login')->nullable();

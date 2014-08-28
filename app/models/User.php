@@ -11,6 +11,8 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
 	use UserTrait, RemindableTrait;
 
+	use SoftDeletingTrait;
+
 	/**
 	 * The database table used by the model.
 	 *
@@ -26,6 +28,8 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	protected $hidden = [ 'password', 'remember_token' ];
 
 	protected $guarded = [ 'id' ];
+
+	protected $fillable = [ 'username', 'password', 'email', 'protected', 'created_at', 'updated_at', 'created_by', 'updated_by', 'last_login', 'remember_token' ];
 
 	public static function boot()
 	{

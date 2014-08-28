@@ -63,6 +63,17 @@ return array(
 			'prefix'    => '',
 		),
 
+		'wiler-old-mysql' => array(
+			'driver'    => 'mysql',
+			'host'      => 'mysql10.websitesource.net',
+			'database'  => 'holland_wiler',
+			'username'  => 'holland_sysedge',
+			'password'  => 'Sys3dg312',
+			'charset'   => 'utf8',
+			'collation' => 'utf8_unicode_ci',
+			'prefix'    => '',
+		),		
+
 		'pgsql' => array(
 			'driver'   => 'pgsql',
 			'host'     => 'localhost',

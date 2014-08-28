@@ -25,17 +25,26 @@ Route::get('sample2', function()
 	return View::make('sample2');
 });
 
+Route::group([ 'prefix' => 'api/v1' ], function() {
 
-API::transform('User', 'UserTransformer');
+	Route::post('auth/login', 'AuthController@postLogin');	
 
-API::error(function(Symfony\Component\HttpKernel\Exception\UnauthorizedHttpException $exception) {
-	return Response::make('Hey, what do you think you are doing...', 401);
+	Route::resource('users','UserController');
+	Route::get('usersWithTrashed', 'UserController@indexWithTrashed');
+
+	Route::group( [ 'before' => 'auth' ], function() {
+
+		Route::get('auth/logout', 'AuthController@getLogout');
+
+	});
+
 });
 
-Route::api([ 'version' => 'v1', 'protected' => true ], function() {
-
-	Route::get('users', 'UserController@index');
-
-	//Route::resource('users','UserController');
-
+// Auth Override
+Route::filter('auth', function()
+{
+	if (Auth::guest())
+	{
+		return Response::json( [ 'message' => 'You are not logged in...' ], 400);
+	}
 });

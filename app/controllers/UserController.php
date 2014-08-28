@@ -1,90 +1,96 @@
 <?php
 
 use Symfony\Component\HttpKernel\Exception as Exception;
+use Illuminate\Database\Eloquent\ModelNotFoundException as ModelNotFoundException;
 
 class UserController extends \BaseController {
 
-	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return Response
-	 */
 	public function index()
 	{
-		return Response::json($test, 400);
-
-		return Response::api()->withCollection(User::all(), new UserTransformer);
+		return Response::json(User::all(), 200);
 	}
 
+	public function indexWithTrashed()
+	{
+		return Response::json(User::withTrashed()->get(), 200);
+	}
 
-	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
 	public function create()
 	{
 		// Not Used (Done with AngularJS)
 	}
 
-
-	/**
-	 * Store a newly created resource in storage.
-	 *
-	 * @return Response
-	 */
 	public function store()
 	{
-		//
+		$form = new UserStoreForm();
+
+		if (!$form->validate()) 
+			return Response::json( [ 'message' => 'Validation Failure', 'error' => $form->getFirstError() ], 400 );
+
+		try {
+			$user = new User();
+			$user->fill(Input::only($user->getFillable()));
+			$user->save();
+
+			return Response::json( [ 'message' => 'Success', 'user' => $user ], 200);
+		}
+		catch (ModelNotFoundException $e)
+		{
+			return Response::json( [ 'message' => 'Exception Error', 'error' => 'Something' ], 400);
+		}
+
 	}
 
-
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
 	public function show($id)
 	{
-		//
+		try {
+			$user = User::findOrFail($id);
+			return Response::json( [ 'message' => 'Success!', 'user' => $user ], 200);
+		}
+		catch (ModelNotFoundException $e)
+		{
+			return Response::json( [ 'message' => 'User Not Found' ], 400);
+		}
+		
 	}
 
-
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
 	public function edit($id)
 	{
 		// Not Used (Done with AngularJS)
 	}
 
-
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
 	public function update($id)
 	{
-		//
+		$form = new UserUpdateForm($id);
+
+		if (!$form->validate())
+			return Response::json( [ 'message' => 'Validation Failed', 'error' => $form->getFirstError() ], 400);
+
+		try {
+			$user = User::findOrFail($id);
+			$user->fill(Input::only($user->getFillable()));
+			$user->save();
+
+			return Response::json( [ 'message' => 'Success!', 'user' => $user ], 200);
+		}
+		catch (ModelNotFoundException $e)
+		{
+			return Response::json( [ 'message' => 'User Not Found' ], 400);
+		}
 	}
 
-
-	/**
-	 * Remove the specified resource from storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
 	public function destroy($id)
 	{
-		//
-	}
+		try {
+			$user = User::findOrFail($id);
+			$user->delete();
 
+			return Response::json( [ 'message' => 'Success!' ], 200);
+		}
+		catch (ModelNotFoundException $e)
+		{
+			return Response::json( [ 'message' => 'User Not Found' ], 400);
+		}
+	}
 
 }
