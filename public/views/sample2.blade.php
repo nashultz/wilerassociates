@@ -17,20 +17,47 @@
   <% css('animate.css') %>
   <% css('style2.css') %>
   <!-- FONTS -->
-  <link href='http://fonts.googleapis.com/css?family=IM+Fell+DW+Pica+SC' rel='stylesheet' type='text/css'>
-  <!-- JAVASCRIPT -->
+  <link href='http://fonts.googleapis.com/css?family=IM+Fell+DW+Pica+SC' rel='stylesheet' type='text/css'> 
+
+  <!-- jQuery -->
   <script src="http://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
   <!--<%-- js('dependencies/jquery-2.1.1.min.js') --%>-->
+
+  <!-- Bootstrap JS -->
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.js" type="text/javascript"></script>
   <!--<%-- js('dependencies/bootstrap.js') --%>-->
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $('.carousel').carousel({
-        interval: 10000
-      });
-    });
-  </script>
-  
+
+  <!-- Angular Core -->
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular.js" type="text/javascript"></script>
+  <!-- angularjs('dependencies/angular.js') -->
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular-route.js" type="text/javascript"></script>
+  <!-- angularjs('dependencies/angular-route.js') -->
+  <!--<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular-animate.js" type="text/javascript"></script>-->
+  <!-- angularjs('dependencies/angular-animate.js') -->
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular-resource.js" type="text/javascript"></script>
+  <!-- angularjs('dependencies/angular-resource.js') -->
+  <!--<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular-cookies.js" type="text/javascript"></script>-->
+  <!-- angularjs('dependencies/angular-cookies.js') -->
+  <!--<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular-loader.js" type="text/javascript"></script>-->
+  <!-- angularjs('dependencies/angular-loader.js') -->
+  <!--<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular-mocks.js" type="text/javascript"></script>-->
+  <!-- angularjs('dependencies/angular-mocks.js') -->
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular-sanitize.js" type="text/javascript"></script>
+  <!-- angularjs('dependencies/angular-sanitize.js') -->
+  <!--<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular-scenario.js" type="text/javascript"></script>-->
+  <!-- angularjs('dependencies/angular-scenario.js') -->
+  <!--<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular-touch.js" type="text/javascript"></script>-->
+  <!-- angularjs('dependencies/angular-touch.js') -->
+
+  <!-- Angular Add-ons -->
+
+
+  <!-- Angular Main Application -->
+
+
+  <!-- Angular Module: ? -->
+
+
 </head>
 <body>
   <!-- Fixed navbar -->
@@ -137,7 +164,7 @@
                 </p>
               </div>
               <div class="viewlisting">
-                <button class="btn btn-primary btn-block">View Listing</button>
+                <button class="btn btn-info btn-block">View Listing</button>
               </div>
             </div>
           </div>
@@ -156,7 +183,7 @@
                 </p>
               </div>
               <div class="viewlisting">
-                <button class="btn btn-warning btn-block">View Listing</button>
+                <button class="btn btn-info btn-block">View Listing</button>
               </div>
             </div>
           </div>
@@ -175,7 +202,7 @@
                 </p>
               </div>
               <div class="viewlisting">
-                <button class="btn btn-danger btn-block">View Listing</button>
+                <button class="btn btn-info btn-block">View Listing</button>
               </div>
             </div>
           </div>
@@ -195,7 +222,7 @@
             <div class="spacer-10"></div>
             <div class="facontent"><span class="fa fa-phone fa-fw fa_front"></span>512 244-6100</div>
             <div class="spacer-5"></div>
-            <div class="facontent"><span class="fa fa-fax fa-fw fa_front"></span>Fax: 512 244-6781</div>
+            <div class="facontent"><span class="fa fa-fax fa-fw fa_front"></span>512 244-6781</div>
             <div class="spacer-5"></div>
             <div class="facontent"><span class="fa fa-map-marker fa-fw fa_front"></span>13101 El Camino Road</div>
             <div class="facontent"><div class="faspacer"></div>Austin, Texas  78727</div>
@@ -203,7 +230,7 @@
         </div>
         <div class="col-sm-6">
           <div class="disclaimer">
-            <h5>Discliamer</h5>
+            <h5>Disclaimer</h5>
             <p>This firm is licensed and regulated by the Texas Real Estate Commission (TREC). 
                TREC administers two Recovery Funds which may be used to satisfy judgements against 
                Inspectors and Real Estate Licenses involving a violation of the law.</p>
@@ -219,6 +246,7 @@
             <div>Copyright &copy; <?php echo date('Y'); ?></div>
             <div>Wiler &amp; Associates, Inc.</div>
             <div>All Rights Reserved</div>
+            <div>Site designed &amp; developed by <a href="http://www.systemsedgeonline.com" title="Systems Edge Online, LLC">Systems Edge Online, LLC</a></div>
           </div>
         </div>
       </div>
