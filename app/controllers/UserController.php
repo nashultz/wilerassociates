@@ -62,17 +62,18 @@ class UserController extends \BaseController {
 		$form = new UserUpdateForm($id);
 
 		if (!$form->validate())
-			return Response::json( [ 'message' => 'Validation Failed', 'error' => $form->getFirstError() ], 400);
+			return JSON::failure( $form->getFirstError() );
 
 		try {
 			$user = User::findOrFail($id);
 			$user->fill(Input::only($user->getFillable()));
 			$user->save();
 
-			return Response::json( [ 'message' => 'Success!', 'user' => $user ], 200);
+			return JSON::success( [ 'user' => $user ] );
 		}
 		catch (ModelNotFoundException $e)
 		{
+			return JSON::failure( ' User Not Found' );
 			return Response::json( [ 'message' => 'User Not Found' ], 400);
 		}
 	}
