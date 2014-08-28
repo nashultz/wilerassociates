@@ -11,6 +11,10 @@
 |
 */
 
+// Test Controls AS:
+$user = User::find(3);
+Auth::login($user);
+
 // Blade Tag Replacement
 Blade::setContentTags('<%', '%>'); // for variables and all things Blade
 Blade::setEscapedContentTags('<%%', '%%>'); // for escaped data
@@ -25,14 +29,17 @@ Route::get('sample2', function()
 	return View::make('sample2');
 });
 
+
+// Model Bindings
+
+
 Route::group([ 'prefix' => 'api/v1' ], function() {
 
 	Route::post('auth/login', 'AuthController@postLogin');	
 
-	Route::resource('users','UserController');
-	Route::get('usersWithTrashed', 'UserController@indexWithTrashed');
-
 	Route::group( [ 'before' => 'auth' ], function() {
+
+		Route::resource('users','UserController');
 
 		Route::get('auth/logout', 'AuthController@getLogout');
 

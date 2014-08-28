@@ -19,7 +19,6 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	// Entrust
 	use HasRole;
 
-
 	/**
 	 * The database table used by the model.
 	 *

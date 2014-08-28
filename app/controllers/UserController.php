@@ -7,42 +7,42 @@ class UserController extends \BaseController {
 
 	public function index()
 	{
-		return Response::json(User::all(), 200);
-	}
+		if (!Auth::User()->can('list_users'))
+			return JSON::accessDenied();
 
-	public function indexWithTrashed()
-	{
-		return Response::json(User::withTrashed()->get(), 200);
-	}
 
-	public function create()
-	{
-		// Not Used (Done with AngularJS)
+		return JSON::success( [ 'users' => User::all() ] );
 	}
 
 	public function store()
 	{
+		if (!Auth::User()->can('create_user'))
+			return JSON::accessDenied();
+
 		$form = new UserStoreForm();
 
 		if (!$form->validate()) 
-			return Response::json( [ 'message' => 'Validation Failure', 'error' => $form->getFirstError() ], 400 );
+			return JSON::failure( $form->getFirstError() );
 		
 		try {
 			$user = new User();
-			$user->fill(Input::only($user->getFillable()));
+			$user->fill( Input::only( $user->getFillable() ) );
 			$user->save();
 
-			return Response::json( [ 'message' => 'Success', 'user' => $user ], 200);
+			return JSON::success( [ 'user' => $user ]);
 		}
 		catch (ModelNotFoundException $e)
 		{
-			return Response::json( [ 'message' => 'Exception Error', 'error' => 'Something' ], 400);
+			return JSON::failure( 'User Not Found' );
 		}
 
 	}
 
 	public function show($id)
 	{
+		if (!Auth::User()->can('read_user'))
+			return JSON::accessDenied();
+
 		try {
 			$user = User::findOrFail($id);
 			return Response::json( [ 'message' => 'Success!', 'user' => $user ], 200);
@@ -54,13 +54,11 @@ class UserController extends \BaseController {
 		
 	}
 
-	public function edit($id)
-	{
-		// Not Used (Done with AngularJS)
-	}
-
 	public function update($id)
 	{
+		if (!Auth::User()->can('update_user'))
+			return JSON::accessDenied();
+
 		$form = new UserUpdateForm($id);
 
 		if (!$form->validate())
@@ -81,6 +79,9 @@ class UserController extends \BaseController {
 
 	public function destroy($id)
 	{
+		if (!Auth::User()->can('delete_user'))
+			return JSON::accessDenied();
+
 		try {
 			$user = User::findOrFail($id);
 			$user->delete();
