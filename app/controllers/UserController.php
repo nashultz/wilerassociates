@@ -26,7 +26,7 @@ class UserController extends \BaseController {
 
 		if (!$form->validate()) 
 			return Response::json( [ 'message' => 'Validation Failure', 'error' => $form->getFirstError() ], 400 );
-
+		
 		try {
 			$user = new User();
 			$user->fill(Input::only($user->getFillable()));

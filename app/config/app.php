@@ -121,8 +121,8 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
-		'Dingo\Api\ApiServiceProvider'
-
+		'Dingo\Api\ApiServiceProvider',
+		'Zizaco\Entrust\EntrustServiceProvider'
 	),
 
 	/*
@@ -190,7 +190,8 @@ return array(
 		'URL'               => 'Illuminate\Support\Facades\URL',
 		'Validator'         => 'Illuminate\Support\Facades\Validator',
 		'View'              => 'Illuminate\Support\Facades\View',
-		'API' 				=> 'Dingo\Api\Facades\API'
+		'API' 				=> 'Dingo\Api\Facades\API',
+		'Entrust'    		=> 'Zizaco\Entrust\EntrustFacade',
 
 	),
 

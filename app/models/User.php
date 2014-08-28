@@ -6,12 +6,19 @@ use Illuminate\Auth\UserTrait;
 use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableTrait;
 use Illuminate\Auth\Reminders\RemindableInterface;
+use Zizaco\Entrust\HasRole;
 
 class User extends Eloquent implements UserInterface, RemindableInterface {
 
+	// Core Traits
 	use UserTrait, RemindableTrait;
 
+	// Soft Deletes
 	use SoftDeletingTrait;
+
+	// Entrust
+	use HasRole;
+
 
 	/**
 	 * The database table used by the model.
