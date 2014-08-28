@@ -73,8 +73,7 @@ class UserController extends \BaseController {
 		}
 		catch (ModelNotFoundException $e)
 		{
-			return JSON::failure( ' User Not Found' );
-			return Response::json( [ 'message' => 'User Not Found' ], 400);
+			return JSON::failure( 'User Not Found' );			
 		}
 	}
 
@@ -87,11 +86,11 @@ class UserController extends \BaseController {
 			$user = User::findOrFail($id);
 			$user->delete();
 
-			return Response::json( [ 'message' => 'Success!' ], 200);
+			return JSON::success();
 		}
 		catch (ModelNotFoundException $e)
 		{
-			return Response::json( [ 'message' => 'User Not Found' ], 400);
+			return JSON::failure( 'User Not Found' );			
 		}
 	}
 
