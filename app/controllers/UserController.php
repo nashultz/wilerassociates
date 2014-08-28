@@ -10,8 +10,14 @@ class UserController extends \BaseController {
 		if (!Auth::User()->can( 'list_users' ) )
 			return JSON::accessDenied();
 
-
-		return JSON::success( [ 'users' => User::all() ] );
+		try {
+			$users = User::all();
+			return JSON::success( [ 'users' => $users ] );
+		}
+		catch (ModelNotFoundException $e)
+		{
+			
+		}
 	}
 
 	public function store()

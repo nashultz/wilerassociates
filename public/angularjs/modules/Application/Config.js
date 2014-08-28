@@ -1,4 +1,6 @@
-angular.module('Application').config(function($routeProvider) {
+angular.module('Application').config(function($routeProvider, $locationProvider) {
+
+    $locationProvider.html5Mode(true);
 
     $routeProvider.when('/', {
         templateUrl: '/angularjs/modules/Application/views/Welcome.blade.php',

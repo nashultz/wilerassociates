@@ -29,10 +29,6 @@ Route::get('sample2', function()
 	return View::make('index');
 });
 
-
-// Model Bindings
-
-
 Route::group([ 'prefix' => 'api/v1' ], function() {
 
 	Route::post('auth/login', 'AuthController@postLogin');	
@@ -55,3 +51,8 @@ Route::filter('auth', function()
 		return Response::json( [ 'message' => 'You are not logged in...' ], 400);
 	}
 });
+
+// CATCH ALL ROUTE
+Route::get('{any}', function() {
+	return View::make('sample2');
+})->where('any', '.*');
