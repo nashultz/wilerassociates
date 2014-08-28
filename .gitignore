@@ -7,6 +7,7 @@ composer.lock
 .DS_Store
 Thumbs.db
 README.md
+/app/config/database.php
 
 bootstrap/compiled.php
 
