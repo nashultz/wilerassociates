@@ -4,7 +4,9 @@
 angular.module('Application', [ 'ngRoute', 'Admin' ] );
 
 // Admin Module
-angular.module('Admin', [] );
+angular.module('Admin', [ 'Auth' ] );
+
+angular.module('Auth', [] );
 
 angular.module('Application').constant('angularMomentConfig', {
     preprocess: null, // optional

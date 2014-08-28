@@ -1,5 +1,4 @@
   
-
   <div class="">
     <div class="row">
       <div class="col-lg-6 col-lg-offset-3">
@@ -8,8 +7,12 @@
     </div>
 
     <!-- Error Notification Div -->
-    <div ng-if="message">
-    	
+    <div ng-show="message">
+    	<div class="row">
+    		<div class="col-lg-6 col-lg-offset-3">
+    			<div class="alert alert-danger" role="alert">{{ message }}</div>
+    		</div>
+    	</div>
     </div>
 
   </div>

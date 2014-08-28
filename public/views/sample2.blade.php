@@ -61,8 +61,15 @@
 
   <!-- Angular Module: Admin -->
   <% angularjs('modules/Admin/Config.js') %>
-  <% angularjs('modules/Admin/controllers/AdminLoginController.js') %>
-  <% angularjs('modules/Admin/controllers/AdminLogoutController.js') %>
+
+  <!-- Angular Module: Auth -->
+  <% angularjs('modules/Auth/Config.js') %>
+  <% angularjs('modules/Auth/controllers/AuthController.js') %>
+
+  <!-- Angular Module: User -->
+  <% angularjs('modules/User/controllers/UserController.js') %>
+  <% angularjs('modules/User/resources/User.js') %>
+  <% angularjs('modules/User/services/UserService.js') %>
 
 </head>
 <body>
