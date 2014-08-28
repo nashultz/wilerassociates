@@ -26,7 +26,7 @@ Route::get('/', function()
 
 Route::get('sample2', function()
 {
-	return View::make('sample2');
+	return View::make('index');
 });
 
 
