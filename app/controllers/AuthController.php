@@ -4,35 +4,36 @@
 
 		public function postLogin()
 		{
-			dd(Input::all());
-
-			if (!Auth::guest())
+			if ( !Auth::guest() )
 			{
-				return Response::json( [ 'message' => 'Already logged in' ], 400);
+				return JSON::failure( 'You are already logged in' );
 			}
 
 			$form = new UserLoginForm();
-			$credentials = Input::only('username', 'password');
+			$credentials = Input::only( 'username', 'password' );
 
-			if (!$form->validate())
+			if ( !$form->validate() )
 			{
-				return Response::json( [ 'message' => 'Validation Failed', 'error' => $form->getFirstError() ], 400);
+				return JSON::failure( $form->getFirstError() );
 			}
 
 			if (!Auth::attempt($credentials))
 			{
-				return Response::json( [ 'message' => 'Authentication Failed' ], 400);
+				return JSON::failure('Invalid Username and/or Password');
 			}
 
-			dd(Auth::user());
-
-			return Response::json( [ 'message' => 'Success!' ], 200);
+			return JSON::success();
 		}
 
 		public function getLogout()
 		{
 			Auth::logout();
-			return Response::json( [ 'message' => 'You have been logged out...' ], 200);
+			return JSON::success( ' You have been logged out' );
+		}
+
+		public function getUser()
+		{
+			return JSON::success( [ 'user' => Auth::User() ] );
 		}
 
 	}

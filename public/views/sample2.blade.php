@@ -65,11 +65,16 @@
   <!-- Angular Module: Auth -->
   <% angularjs('modules/Auth/Config.js') %>
   <% angularjs('modules/Auth/controllers/AuthController.js') %>
+  <% angularjs('modules/Auth/services/AuthService.js') %>
 
   <!-- Angular Module: User -->
   <% angularjs('modules/User/controllers/UserController.js') %>
   <% angularjs('modules/User/resources/User.js') %>
   <% angularjs('modules/User/services/UserService.js') %>
+
+  <!-- Angular Module: Dashboard -->
+  <% angularjs('modules/Dashboard/Config.js') %>
+  <% angularjs('modules/Dashboard/controllers/DashboardController.js') %>
 
 </head>
 <body>

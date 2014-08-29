@@ -11,10 +11,6 @@
 |
 */
 
-// Test Controls AS:
-$user = User::find(3);
-Auth::login($user);
-
 // Blade Tag Replacement
 Blade::setContentTags('<%', '%>'); // for variables and all things Blade
 Blade::setEscapedContentTags('<%%', '%%>'); // for escaped data
@@ -35,7 +31,13 @@ Route::group([ 'prefix' => 'api/v1' ], function() {
 
 	Route::group( [ 'before' => 'auth' ], function() {
 
+		// Get Authenticated User
+		Route::get('auth/user', 'AuthController@getUser');
+
 		Route::resource('users','UserController');
+
+		// Get User Count
+		Route::get('user/count', 'UserController@getUserCount');
 
 		Route::get('auth/logout', 'AuthController@getLogout');
 

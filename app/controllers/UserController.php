@@ -100,4 +100,9 @@ class UserController extends \BaseController {
 		}
 	}
 
+	public function getUserCount()
+	{
+		return JSON::success( [ 'count' => User::count() ] );
+	}
+
 }

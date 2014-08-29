@@ -4,7 +4,7 @@
 
 		public static function accessDenied( $code = 400 )
 		{
-			return Response::json( [ 'message' => 'Access Denied' ], $code );
+			return Response::json( [ 'error' => 'Access Denied' ], $code );
 		}
 
 		public static function success( $data = [] )
@@ -12,9 +12,9 @@
 			return Response::json( $data, 200 );
 		}
 
-		public static function failure( $message, $code = 400 )
+		public static function failure( $error, $code = 400 )
 		{
-			return Response::json( [ 'message' => $message ], $code );
+			return Response::json( [ 'error' => $error ], $code );
 		}
 
 	}

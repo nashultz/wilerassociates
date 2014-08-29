@@ -1,3 +1,5 @@
+
+  <a href="javascript:void(0)" ng-click="logout()">Logout</a>
   
   <div class="">
     <div class="row">
@@ -37,7 +39,7 @@
                   id="username"
                   name="username"
                   placeholder="Username"
-                  ng-model="creds.username"
+                  ng-model="credentials.username"
                   ng-model-options="{updateOn: 'blur'}"
                   required>
                 </div>
@@ -51,7 +53,7 @@
                   id="password"
                   name="password"
                   placeholder="Password"
-                  ng-model="creds.password"
+                  ng-model="credentials.password"
                   required>
                 </div>
               </div>
