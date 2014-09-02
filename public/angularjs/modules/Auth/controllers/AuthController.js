@@ -1,4 +1,4 @@
-angular.module('Auth').controller('AuthController', function($scope, $location, AuthService) {
+angular.module('Auth').controller('AuthController', function($scope, $location, AuthService, User) {
 
 	$scope.message = null;
 	$scope.credentials = {};

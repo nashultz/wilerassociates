@@ -8,13 +8,10 @@ use Illuminate\Auth\Reminders\RemindableTrait;
 use Illuminate\Auth\Reminders\RemindableInterface;
 use Zizaco\Entrust\HasRole;
 
-class User extends Eloquent implements UserInterface, RemindableInterface {
+class User extends BaseModel implements UserInterface, RemindableInterface {
 
 	// Core Traits
 	use UserTrait, RemindableTrait;
-
-	// Soft Deletes
-	use SoftDeletingTrait;
 
 	// Entrust
 	use HasRole;
@@ -35,6 +32,8 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
 	protected $guarded = [ 'id' ];
 
+	protected $filterable = [ 'id', 'username', 'email', 'created_at', 'updated_at', 'last_login' ];
+
 	protected $fillable = [ 'username', 'password', 'email', 'protected', 'created_at', 'updated_at', 'created_by', 'updated_by', 'last_login', 'remember_token' ];
 
 	public static function boot()
@@ -46,6 +45,11 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 			$user->password = Hash::make($user->password);
 
 		});
+	}
+
+	public function getFilterable()
+	{
+		return $this->filterable;
 	}
 
 }

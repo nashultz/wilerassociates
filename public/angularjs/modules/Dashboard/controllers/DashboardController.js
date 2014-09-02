@@ -1,15 +1,14 @@
-angular.module('Dashboard').controller('DashboardController', function($scope, AuthService, UserService) {
+angular.module('Dashboard').controller('DashboardController', function($scope, User) {
 
-	// Get the User
-	AuthService.fetchAuthUser().then(function(response) {
-		$scope.user = response.data.user;
-	});
+	$scope.users_one = User.query( { filter: 'id', sort: 'asc' });
 
-	// Fetch User Count
-	UserService.fetchUserCount().then(function(response) {
-		console.log(response);
-		$scope.user_count = response.data.count;
-	});
+	$scope.users_two = User.query( { filter: 'id', sort: 'desc' });
+
+	$scope.users_three = User.query();
+
+	$scope.users_four = User.query( { filter: 'username', sort: 'asc', limit: 2 } );
+
+	$scope.users_stats = User.query( { stats: true } );
 
 });
 

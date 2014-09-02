@@ -1,4 +1,4 @@
-angular.module('Auth').service('AuthService', function($http, UserService) {
+angular.module('Auth').service('AuthService', function($http, $location) {
 
 	this.attempt = function(credentials)
 	{
@@ -8,11 +8,6 @@ angular.module('Auth').service('AuthService', function($http, UserService) {
 	this.logout = function()
 	{
 		return $http.get('/api/v1/auth/logout');
-	}
-
-	this.fetchAuthUser = function()
-	{
-		return $http.get('/api/v1/auth/user');
 	}
 
 });

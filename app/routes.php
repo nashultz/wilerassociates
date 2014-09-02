@@ -29,7 +29,7 @@ Route::group([ 'prefix' => 'api/v1' ], function() {
 
 	Route::post('auth/login', 'AuthController@postLogin');	
 
-	Route::group( [ 'before' => 'auth' ], function() {
+	//Route::group( [ 'before' => 'auth' ], function() {
 
 		// Get Authenticated User
 		Route::get('auth/user', 'AuthController@getUser');
@@ -41,7 +41,7 @@ Route::group([ 'prefix' => 'api/v1' ], function() {
 
 		Route::get('auth/logout', 'AuthController@getLogout');
 
-	});
+	//});
 
 });
 

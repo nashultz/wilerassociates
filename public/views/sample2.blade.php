@@ -70,7 +70,6 @@
   <!-- Angular Module: User -->
   <% angularjs('modules/User/controllers/UserController.js') %>
   <% angularjs('modules/User/resources/User.js') %>
-  <% angularjs('modules/User/services/UserService.js') %>
 
   <!-- Angular Module: Dashboard -->
   <% angularjs('modules/Dashboard/Config.js') %>
