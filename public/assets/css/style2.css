@@ -53,11 +53,11 @@ body {
   background: rgba(255, 255, 255, 0.8);
   color: #000;
   margin: 140px 0px 30px;
-  padding: 10px 30px 15px; }
+  padding: 10px 30px 15px;
+  font-family: Georgia, serif; }
   .welcome h1 {
     text-align: center;
     text-transform: uppercase;
-    font-family: 'IM Fell DW Pica SC', serif;
     margin: 10px 0; }
   .welcome h3 {
     margin: 10px 0;

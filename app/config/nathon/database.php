@@ -25,7 +25,7 @@ return array(
 			'host'      => 'localhost',
 			'database'  => 'wiler',
 			'username'  => 'root',
-			'password'  => 'root',
+			'password'  => 'Andrew23',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
