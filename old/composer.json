@@ -6,8 +6,8 @@
 	"type": "project",
 	"require": {
 		"laravel/framework": "4.2.*",
-		"zizaco/entrust": "dev-master",
-		"dingo/api": "dev-master"
+		"zizaco/entrust": "dev-2.0-dev",
+		"dingo/api": "0.6.*@dev"
 	},
 	"autoload": {
 		"classmap": [
