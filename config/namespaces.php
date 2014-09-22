@@ -13,7 +13,7 @@ return [
 	|
 	*/
 
-	'root' => 'App\\',
+	'root' => 'Wiler\\',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -26,14 +26,14 @@ return [
 	|
 	*/
 
-	'console' => 'App\Console\\',
+	'console' => 'Wiler\Console\\',
 
-	'controllers' => 'App\Http\Controllers\\',
+	'controllers' => 'Wiler\Http\Controllers\\',
 
-	'filters' => 'App\Http\Filters\\',
+	'filters' => 'Wiler\Http\Filters\\',
 
-	'providers' => 'App\Providers\\',
+	'providers' => 'Wiler\Providers\\',
 
-	'requests' => 'App\Http\Requests\\',
+	'requests' => 'Wiler\Http\Requests\\',
 
 ];

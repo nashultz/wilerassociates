@@ -1,4 +1,4 @@
-<?php namespace App\Providers;
+<?php namespace Wiler\Providers;
 
 use Illuminate\Routing\FilterServiceProvider as ServiceProvider;
 
@@ -10,7 +10,7 @@ class FilterServiceProvider extends ServiceProvider {
 	 * @var array
 	 */
 	protected $before = [
-		'App\Http\Filters\MaintenanceFilter',
+		'Wiler\Http\Filters\MaintenanceFilter',
 	];
 
 	/**
@@ -28,10 +28,10 @@ class FilterServiceProvider extends ServiceProvider {
 	 * @var array
 	 */
 	protected $filters = [
-		'auth' => 'App\Http\Filters\AuthFilter',
-		'auth.basic' => 'App\Http\Filters\BasicAuthFilter',
-		'csrf' => 'App\Http\Filters\CsrfFilter',
-		'guest' => 'App\Http\Filters\GuestFilter',
+		'auth' => 'Wiler\Http\Filters\AuthFilter',
+		'auth.basic' => 'Wiler\Http\Filters\BasicAuthFilter',
+		'csrf' => 'Wiler\Http\Filters\CsrfFilter',
+		'guest' => 'Wiler\Http\Filters\GuestFilter',
 	];
 
 }

@@ -19,8 +19,13 @@ gulp.task('icons', function() {
         .pipe(gulp.dest('./public/fonts'));
 });
 
-gulp.task('scripts', function() {
+gulp.task('bsscripts', function() {
     return gulp.src(config.bowerDir + '/bootstrap-sass-official/assets/javascripts/bootstrap/**.*')
+        .pipe(gulp.dest('./public/js'));
+});
+
+gulp.task('jqscripts', function() {
+    return gulp.src(config.bowerDir + '/jquery/dist/**.*')
         .pipe(gulp.dest('./public/js'));
 });
 
@@ -46,4 +51,4 @@ gulp.task('watch', function() {
     gulp.watch(config.sassPath + '/**/*.scss', ['css']);
 });
 
-gulp.task('default', ['bower', 'icons', 'scripts', 'css', 'watch']);
+gulp.task('default', ['bower', 'icons', 'bsscripts', 'jqscripts', 'css', 'watch']);

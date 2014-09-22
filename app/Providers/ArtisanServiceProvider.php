@@ -1,4 +1,4 @@
-<?php namespace App\Providers;
+<?php namespace Wiler\Providers;
 
 use InspireCommand;
 use Illuminate\Support\ServiceProvider;
@@ -19,7 +19,7 @@ class ArtisanServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		$this->commands('App\Console\InspireCommand');
+		$this->commands('Wiler\Console\InspireCommand');
 	}
 
 	/**
@@ -29,7 +29,7 @@ class ArtisanServiceProvider extends ServiceProvider {
 	 */
 	public function provides()
 	{
-		return ['App\Console\InspireCommand'];
+		return ['Wiler\Console\InspireCommand'];
 	}
 
 }

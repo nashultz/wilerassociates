@@ -1,4 +1,4 @@
-<?php namespace App\Providers;
+<?php namespace Wiler\Providers;
 
 use Illuminate\Contracts\Routing\UrlGenerator;
 use Illuminate\Routing\RouteServiceProvider as ServiceProvider;

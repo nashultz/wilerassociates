@@ -1,4 +1,4 @@
-<?php namespace App\Http\Filters;
+<?php namespace Wiler\Http\Filters;
 
 use Auth, Redirect;
 

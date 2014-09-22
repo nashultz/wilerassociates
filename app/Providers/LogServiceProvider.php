@@ -1,4 +1,4 @@
-<?php namespace App\Providers;
+<?php namespace Wiler\Providers;
 
 use Illuminate\Contracts\Logging\Log;
 use Illuminate\Support\ServiceProvider;

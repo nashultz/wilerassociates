@@ -1,4 +1,4 @@
-<?php namespace App;
+<?php namespace Wiler;
 
 use Illuminate\Auth\UserTrait;
 use Illuminate\Database\Eloquent\Model;
