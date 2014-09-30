@@ -1,0 +1,166 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'grunt-contrib-copy',
+1 verbose cli   '--save-dev' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.32
+4 verbose node symlink /usr/bin/node
+5 verbose cache add [ 'grunt-contrib-copy', null ]
+6 verbose cache add name=undefined spec="grunt-contrib-copy" args=["grunt-contrib-copy",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'grunt-contrib-copy',
+7 verbose parsed url   path: 'grunt-contrib-copy',
+7 verbose parsed url   href: 'grunt-contrib-copy' }
+8 silly lockFile a84690fa-grunt-contrib-copy grunt-contrib-copy
+9 verbose lock grunt-contrib-copy /home/nashultz/.npm/a84690fa-grunt-contrib-copy.lock
+10 silly lockFile a84690fa-grunt-contrib-copy grunt-contrib-copy
+11 silly lockFile a84690fa-grunt-contrib-copy grunt-contrib-copy
+12 verbose addNamed [ 'grunt-contrib-copy', '' ]
+13 verbose addNamed [ null, '*' ]
+14 silly lockFile 9ec4cea0-grunt-contrib-copy grunt-contrib-copy@
+15 verbose lock grunt-contrib-copy@ /home/nashultz/.npm/9ec4cea0-grunt-contrib-copy.lock
+16 silly addNameRange { name: 'grunt-contrib-copy', range: '*', hasData: false }
+17 verbose request where is /grunt-contrib-copy
+18 verbose request registry https://registry.npmjs.org/
+19 verbose request id 120c2abc5cb222c5
+20 verbose url raw /grunt-contrib-copy
+21 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-contrib-copy' ]
+22 verbose url resolved https://registry.npmjs.org/grunt-contrib-copy
+23 verbose request where is https://registry.npmjs.org/grunt-contrib-copy
+24 info trying registry request attempt 1 at 10:45:05
+25 verbose etag "98U90JBZI1FK63NJWKWF1QVIX"
+26 http GET https://registry.npmjs.org/grunt-contrib-copy
+27 http 304 https://registry.npmjs.org/grunt-contrib-copy
+28 silly registry.get cb [ 304,
+28 silly registry.get   { date: 'Mon, 29 Sep 2014 15:45:05 GMT',
+28 silly registry.get     server: 'Apache',
+28 silly registry.get     via: '1.1 varnish',
+28 silly registry.get     'last-modified': 'Mon, 29 Sep 2014 15:45:05 GMT',
+28 silly registry.get     'cache-control': 'max-age=60',
+28 silly registry.get     etag: '"98U90JBZI1FK63NJWKWF1QVIX"',
+28 silly registry.get     'x-served-by': 'cache-ord1724-ORD',
+28 silly registry.get     'x-cache': 'HIT',
+28 silly registry.get     'x-cache-hits': '1',
+28 silly registry.get     'x-timer': 'S1412005505.384988,VS0,VE0',
+28 silly registry.get     vary: 'Accept',
+28 silly registry.get     'content-length': '0',
+28 silly registry.get     'keep-alive': 'timeout=10, max=50',
+28 silly registry.get     connection: 'Keep-Alive' } ]
+29 verbose etag https://registry.npmjs.org/grunt-contrib-copy from cache
+30 silly addNameRange number 2 { name: 'grunt-contrib-copy', range: '*', hasData: true }
+31 silly addNameRange versions [ 'grunt-contrib-copy',
+31 silly addNameRange   [ '0.2.0',
+31 silly addNameRange     '0.2.1',
+31 silly addNameRange     '0.2.2',
+31 silly addNameRange     '0.2.3',
+31 silly addNameRange     '0.2.4',
+31 silly addNameRange     '0.3.0',
+31 silly addNameRange     '0.3.1',
+31 silly addNameRange     '0.3.2',
+31 silly addNameRange     '0.4.0',
+31 silly addNameRange     '0.4.1',
+31 silly addNameRange     '0.5.0',
+31 silly addNameRange     '0.6.0',
+31 silly addNameRange     '0.4.0-rc7' ] ]
+32 verbose addNamed [ 'grunt-contrib-copy', '0.6.0' ]
+33 verbose addNamed [ '0.6.0', '0.6.0' ]
+34 silly lockFile 0a8be301-grunt-contrib-copy-0-6-0 grunt-contrib-copy@0.6.0
+35 verbose lock grunt-contrib-copy@0.6.0 /home/nashultz/.npm/0a8be301-grunt-contrib-copy-0-6-0.lock
+36 silly lockFile 17110179-opy-grunt-contrib-copy-0-6-0-tgz https://registry.npmjs.org/grunt-contrib-copy/-/grunt-contrib-copy-0.6.0.tgz
+37 verbose lock https://registry.npmjs.org/grunt-contrib-copy/-/grunt-contrib-copy-0.6.0.tgz /home/nashultz/.npm/17110179-opy-grunt-contrib-copy-0-6-0-tgz.lock
+38 verbose addRemoteTarball [ 'https://registry.npmjs.org/grunt-contrib-copy/-/grunt-contrib-copy-0.6.0.tgz',
+38 verbose addRemoteTarball   'e18768e8c82e77a23b2eba603754a0146ece074e' ]
+39 info retry fetch attempt 1 at 10:45:05
+40 verbose fetch to= /tmp/npm-29253--ahAJrWb/registry.npmjs.org/grunt-contrib-copy/-/grunt-contrib-copy-0.6.0.tgz
+41 http GET https://registry.npmjs.org/grunt-contrib-copy/-/grunt-contrib-copy-0.6.0.tgz
+42 http 200 https://registry.npmjs.org/grunt-contrib-copy/-/grunt-contrib-copy-0.6.0.tgz
+43 silly lockFile 17110179-opy-grunt-contrib-copy-0-6-0-tgz https://registry.npmjs.org/grunt-contrib-copy/-/grunt-contrib-copy-0.6.0.tgz
+44 silly lockFile 17110179-opy-grunt-contrib-copy-0-6-0-tgz https://registry.npmjs.org/grunt-contrib-copy/-/grunt-contrib-copy-0.6.0.tgz
+45 silly lockFile 0a8be301-grunt-contrib-copy-0-6-0 grunt-contrib-copy@0.6.0
+46 silly lockFile 0a8be301-grunt-contrib-copy-0-6-0 grunt-contrib-copy@0.6.0
+47 silly lockFile 9ec4cea0-grunt-contrib-copy grunt-contrib-copy@
+48 silly lockFile 9ec4cea0-grunt-contrib-copy grunt-contrib-copy@
+49 silly resolved [ { name: 'grunt-contrib-copy',
+49 silly resolved     description: 'Copy files and folders.',
+49 silly resolved     version: '0.6.0',
+49 silly resolved     homepage: 'https://github.com/gruntjs/grunt-contrib-copy',
+49 silly resolved     author: { name: 'Grunt Team', url: 'http://gruntjs.com/' },
+49 silly resolved     repository:
+49 silly resolved      { type: 'git',
+49 silly resolved        url: 'git://github.com/gruntjs/grunt-contrib-copy.git' },
+49 silly resolved     bugs: { url: 'https://github.com/gruntjs/grunt-contrib-copy/issues' },
+49 silly resolved     licenses: [ [Object] ],
+49 silly resolved     engines: { node: '>= 0.8.0' },
+49 silly resolved     scripts: { test: 'grunt test' },
+49 silly resolved     dependencies: { chalk: '~0.5.1' },
+49 silly resolved     devDependencies:
+49 silly resolved      { 'grunt-contrib-jshint': '~0.10.0',
+49 silly resolved        'grunt-contrib-nodeunit': '~0.4.1',
+49 silly resolved        'grunt-contrib-clean': '~0.6.0',
+49 silly resolved        'grunt-contrib-internal': '~0.4.5',
+49 silly resolved        grunt: '~0.4.0' },
+49 silly resolved     peerDependencies: { grunt: '~0.4.0' },
+49 silly resolved     keywords: [ 'gruntplugin' ],
+49 silly resolved     files: [ 'tasks', 'LICENSE-MIT' ],
+49 silly resolved     contributors: [ [Object], [Object], [Object], [Object], [Object] ],
+49 silly resolved     gitHead: '50a5a9e266b31a0f7ee7d565f05b4744c672a27b',
+49 silly resolved     _id: 'grunt-contrib-copy@0.6.0',
+49 silly resolved     _shasum: 'e18768e8c82e77a23b2eba603754a0146ece074e',
+49 silly resolved     _from: 'grunt-contrib-copy@',
+49 silly resolved     _npmVersion: '1.4.20',
+49 silly resolved     _npmUser: { name: 'shama', email: 'kyle@dontkry.com' },
+49 silly resolved     maintainers: [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+49 silly resolved     dist:
+49 silly resolved      { shasum: 'e18768e8c82e77a23b2eba603754a0146ece074e',
+49 silly resolved        tarball: 'http://registry.npmjs.org/grunt-contrib-copy/-/grunt-contrib-copy-0.6.0.tgz' },
+49 silly resolved     directories: {},
+49 silly resolved     _resolved: 'https://registry.npmjs.org/grunt-contrib-copy/-/grunt-contrib-copy-0.6.0.tgz' } ]
+50 info install grunt-contrib-copy@0.6.0 into /usr/lib
+51 info installOne grunt-contrib-copy@0.6.0
+52 verbose lib/node_modules/grunt-contrib-copy unbuild
+53 verbose tar unpack /home/nashultz/.npm/grunt-contrib-copy/0.6.0/package.tgz
+54 silly lockFile a78b789a--node-modules-grunt-contrib-copy tar:///usr/lib/node_modules/grunt-contrib-copy
+55 verbose lock tar:///usr/lib/node_modules/grunt-contrib-copy /home/nashultz/.npm/a78b789a--node-modules-grunt-contrib-copy.lock
+56 silly lockFile 0f106d64-t-contrib-copy-0-6-0-package-tgz tar:///home/nashultz/.npm/grunt-contrib-copy/0.6.0/package.tgz
+57 verbose lock tar:///home/nashultz/.npm/grunt-contrib-copy/0.6.0/package.tgz /home/nashultz/.npm/0f106d64-t-contrib-copy-0-6-0-package-tgz.lock
+58 silly gunzTarPerm modes [ '775', '664' ]
+59 error Error: EACCES, mkdir '/usr/lib/node_modules/grunt-contrib-copy'
+59 error  { [Error: EACCES, mkdir '/usr/lib/node_modules/grunt-contrib-copy']
+59 error   errno: 3,
+59 error   code: 'EACCES',
+59 error   path: '/usr/lib/node_modules/grunt-contrib-copy',
+59 error   fstream_type: 'Directory',
+59 error   fstream_path: '/usr/lib/node_modules/grunt-contrib-copy',
+59 error   fstream_class: 'DirWriter',
+59 error   fstream_stack:
+59 error    [ '/usr/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+59 error      '/usr/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53',
+59 error      'Object.oncomplete (fs.js:107:15)' ] }
+60 error Please try running this command again as root/Administrator.
+61 error System Linux 3.13.0-36-generic
+62 error command "/usr/bin/node" "/usr/bin/npm" "install" "-g" "grunt-contrib-copy" "--save-dev"
+63 error cwd /home/nashultz/public_html/wilerassociates/develop
+64 error node -v v0.10.32
+65 error npm -v 1.4.28
+66 error path /usr/lib/node_modules/grunt-contrib-copy
+67 error fstream_path /usr/lib/node_modules/grunt-contrib-copy
+68 error fstream_type Directory
+69 error fstream_class DirWriter
+70 error code EACCES
+71 error errno 3
+72 error stack Error: EACCES, mkdir '/usr/lib/node_modules/grunt-contrib-copy'
+73 error fstream_stack /usr/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+73 error fstream_stack /usr/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53
+73 error fstream_stack Object.oncomplete (fs.js:107:15)
+74 verbose exit [ 3, true ]

@@ -1,10 +1,8 @@
-@extends('layouts.frontend.default')
 
-@section('content')
 <div class="welcome-container">
     <div class="container">
       <div class="row">
-        <div class="col-sm-9">
+        <div class="col-md-9">
           <div class="welcome">
             <h1>Wiler &amp; Associates, Inc.</h1>
             <p>We welcome you to Wiler &amp; Associates Real Estate Services, Inc. Wiler &amp; Associates provide
@@ -15,7 +13,7 @@
             <p>We look forward to having the opportunity to earn your business.</p>
           </div>
         </div>
-        <div class="col-sm-3">
+        <div class="col-md-3">
           <div class="welcome">
             <h3 class="search-title">Quick Search</h3>
             <form class="">
@@ -40,65 +38,72 @@
       </div>
     </div>
   </div>
-  <div class="listings-container container">
+  <div class="f-listings-container container">
     <div class="row">
-      <div class="listings-grid">
-        <div class="listings">
-          <div class="col-md-4">
-            <div class="listing">
-              <h4 class="listing-title">Listing Title</h4>
-              <img src="img/properties/c_1.jpg" alt="Listing Title" class="img-thumbnail img-responsive"/>
-              <div class="desc">
+      <div class="f-listings-grid">
+        <div class="f-listings">
+          <div class="col-md-6">
+            <div class="f-listing">
+              <h4 class="f-listing-title">Listing Title</h4>
+              <div class="col-xs-4">
+                <img src="img/properties/c_1.jpg" alt="Listing Title" class="img-thumbnail img-responsive"/>
+              </div>
+              <div class="col-xs-8 f-listing-desc">
                 <p>Arlington Comfort Suites - 411 Road to 6 Flags W<br>
                    Arlington, TX 76011</p>
                 <p>Listed By: Dustin Hughey</p>
-                <p>108 Rooms Full Service Comfort Suites Hotel, All Suites,
-                   Top Ranked Hotel, 71,149 +- Sqft, 2.41 acres 411 W Road to
-                   Six Flags, Arlington, Texas 76011 Turnpike South Addition
-                   Lot 1 B1, 2.41 acres
-                </p>
-              </div>
-              <div class="viewlisting">
-                <button class="btn btn-info btn-block">View Listing</button>
-              </div>
+                <div class="f-viewlisting">
+                  <button class="btn btn-info btn-block">View Listing</button>
+                </div>
+              </div><div class="clearfix"></div>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="listing">
-              <h4 class="listing-title">Listing Title</h4>
-              <img src="img/properties/c_1.jpg" alt="Listing Title" class="img-thumbnail img-responsive"/>
-              <div class="desc">
+          <div class="col-md-6">
+            <div class="f-listing">
+              <h4 class="f-listing-title">Listing Title</h4>
+              <div class="col-xs-4">
+                <img src="img/properties/c_1.jpg" alt="Listing Title" class="img-thumbnail img-responsive"/>
+              </div>
+              <div class="col-xs-8 f-listing-desc">
                 <p>Arlington Comfort Suites - 411 Road to 6 Flags W<br>
                    Arlington, TX 76011</p>
                 <p>Listed By: Dustin Hughey</p>
-                <p>108 Rooms Full Service Comfort Suites Hotel, All Suites,
-                   Top Ranked Hotel, 71,149 +- Sqft, 2.41 acres 411 W Road to
-                   Six Flags, Arlington, Texas 76011 Turnpike South Addition
-                   Lot 1 B1, 2.41 acres
-                </p>
-              </div>
-              <div class="viewlisting">
-                <button class="btn btn-info btn-block">View Listing</button>
-              </div>
+                <div class="f-viewlisting">
+                  <button class="btn btn-info btn-block">View Listing</button>
+                </div>
+              </div><div class="clearfix"></div>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="listing">
-              <h4 class="listing-title">Listing Title</h4>
-              <img src="img/properties/c_1.jpg" alt="Listing Title" class="img-thumbnail img-responsive"/>
-              <div class="desc">
+          <div class="col-md-6">
+            <div class="f-listing">
+              <h4 class="f-listing-title">Listing Title</h4>
+              <div class="col-xs-4">
+                <img src="img/properties/c_1.jpg" alt="Listing Title" class="img-thumbnail img-responsive"/>
+              </div>
+              <div class="col-xs-8 f-listing-desc">
                 <p>Arlington Comfort Suites - 411 Road to 6 Flags W<br>
                    Arlington, TX 76011</p>
                 <p>Listed By: Dustin Hughey</p>
-                <p>108 Rooms Full Service Comfort Suites Hotel, All Suites,
-                   Top Ranked Hotel, 71,149 +- Sqft, 2.41 acres 411 W Road to
-                   Six Flags, Arlington, Texas 76011 Turnpike South Addition
-                   Lot 1 B1, 2.41 acres
-                </p>
+                <div class="f-viewlisting">
+                  <button class="btn btn-info btn-block">View Listing</button>
+                </div>
+              </div><div class="clearfix"></div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="f-listing">
+              <h4 class="f-listing-title">Listing Title</h4>
+              <div class="col-xs-4">
+                <img src="img/properties/c_1.jpg" alt="Listing Title" class="img-thumbnail img-responsive"/>
               </div>
-              <div class="viewlisting">
-                <button class="btn btn-info btn-block">View Listing</button>
-              </div>
+              <div class="col-xs-8 f-listing-desc">
+                <p>Arlington Comfort Suites - 411 Road to 6 Flags W<br>
+                   Arlington, TX 76011</p>
+                <p>Listed By: Dustin Hughey</p>
+                <div class="f-viewlisting">
+                  <button class="btn btn-info btn-block">View Listing</button>
+                </div>
+              </div><div class="clearfix"></div>
             </div>
           </div>
           <div class="clearfix"></div>
@@ -106,4 +111,3 @@
       </div>
     </div>
   </div>
-@stop

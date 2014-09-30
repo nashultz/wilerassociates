@@ -768,6 +768,30 @@ $badge-font-weight:           bold !default;
 $badge-line-height:           1 !default;
 $badge-border-radius:         10px !default;
 
+$badge-default-color:              #333 !default;
+$badge-default-bg:                 #fff !default;
+$badge-default-border:             #ccc !default;
+
+$badge-primary-color:              #fff !default;
+$badge-primary-bg:                 $brand-primary !default;
+$badge-primary-border:             darken($btn-primary-bg, 5%) !default;
+
+$badge-success-color:              #fff !default;
+$badge-success-bg:                 $brand-success !default;
+$badge-success-border:             darken($btn-success-bg, 5%) !default;
+
+$badge-info-color:                 #fff !default;
+$badge-info-bg:                    $brand-info !default;
+$badge-info-border:                darken($btn-info-bg, 5%) !default;
+
+$badge-warning-color:              #fff !default;
+$badge-warning-bg:                 $brand-warning !default;
+$badge-warning-border:             darken($btn-warning-bg, 5%) !default;
+
+$badge-danger-color:               #fff !default;
+$badge-danger-bg:                  $brand-danger !default;
+$badge-danger-border:              darken($btn-danger-bg, 5%) !default;
+
 
 //== Breadcrumbs
 //

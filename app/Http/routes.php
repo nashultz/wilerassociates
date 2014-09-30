@@ -11,10 +11,10 @@
 |
 */
 
-Route::get('/', [
-    'as' => 'home',
-    'uses' => 'PagesController@home'
-]);
+Route::get('/', function()
+{
+  return View::make('layouts.frontend.default');
+});
 Route::get('search', [
     'as' => 'search',
     'uses' => 'PagesController@search'
@@ -43,3 +43,13 @@ Route::get('mortgage-payment', [
     'as' => 'mortpayment',
     'uses' => 'PagesController@resourceMortgagePayment'
 ]);
+Route::get('contact', [
+    'as' => 'contact',
+    'uses' => 'ContactController@index'
+]);
+Route::post('contact', [
+    'as' => 'contact',
+    'uses' => 'ContactController@send'
+]);
+Route::controller('auth', 'Auth\AuthController');
+Route::controller('password', 'Auth\RemindersController');

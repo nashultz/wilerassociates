@@ -1,0 +1,24 @@
+<?php
+
+// Composer: "fzaninotto/faker": "v1.4.0"
+use Faker\Factory as Faker;
+use Illuminate\Database\Seeder;
+use Wiler\User;
+
+class UserTableSeeder extends Seeder {
+
+  public function run()
+	{
+		$faker = Faker::create();
+
+		foreach(range(1, 1) as $index)
+		{
+			User::create([
+        'username'=>'nathon',
+        'password'=>'nathon',
+        'email'=>'nashultz07@gmail.com'
+			]);
+		}
+	}
+
+}

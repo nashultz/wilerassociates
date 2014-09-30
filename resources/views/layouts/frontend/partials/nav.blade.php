@@ -14,18 +14,15 @@
           </div>
           <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav navbar-right">
-                  <li>{!! link_to_route('home', 'Home') !!}</a></li>
-                  <li>{!! link_to_route('search', 'Search') !!}</li>
+                  <li>{!! link_to('/', 'Home') !!}</li>
+                  <!--<li>{ link_to_route('search', 'Search') }</li>-->
                   <li class="dropdown">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown">Listings <span class="caret"></span></a>
                       <ul class="dropdown-menu">
                           <li>{!! link_to_route('commlist','Commercial Listings') !!}</li>
                           <li>{!! link_to_route('resilist','Residential Listings') !!}</li>
-                        <!--  <li><a href="#">Something else here</a></li>
-                          <li class="divider"></li>
-                          <li class="dropdown-header">Nav header</li>
-                          <li><a href="#">Separated link</a></li>
-                          <li><a href="#">One more separated link</a></li>-->
+                        <!--  <li class="divider"></li>
+                          <li class="dropdown-header">Nav header</li>-->
                       </ul>
                   </li>
                   <li class="dropdown">
@@ -37,7 +34,7 @@
                         <li>{!! link_to_route('mortpayment','Mortgage Payment Qualifier') !!}</li>
                     </ul>
                   </li>
-                  <li><a href="#">Contact</a></li>
+                  <li>{!! link_to_route('contact','Contact') !!}</li>
               </ul>
           </div><!--/.nav-collapse -->
       </div>
